@@ -1,0 +1,95 @@
+.hmcabw-main-wrapper {
+    border: 1px solid #DDDDDD;
+    margin: 20px 0;
+    background: transparent;
+    padding: 5px;
+}
+
+.hmcabw-main-wrapper .hmcabw-parent-container {
+    border: 0px solid #000;
+    width: 100%;
+    clear: both;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 80px;
+    margin: 0;
+}
+
+.hmcabw-main-wrapper .hmcabw-parent-container .hmcabw-image-container {
+    min-width: 50px;
+    border: 0px solid #009900;
+    min-height: 80px;
+    margin-right: 5px;
+    padding: 5px 0 0 5px;
+    text-align: center;
+}
+
+.hmcabw-main-wrapper .hmcabw-parent-container .hmcabw-image-container img {
+    margin: 5px auto 0;
+}
+
+.hmcabw-main-wrapper .hmcabw-parent-container .hmcabw-image-container.circle img {
+    border-radius: 50%;
+}
+
+.hmcabw-main-wrapper .hmcabw-parent-container .hmcabw-info-container {
+    flex: 1;
+    border: 0px solid #FF0000;
+    min-height: 80px;
+    padding: 5px 15px;
+}
+
+.hmcabw-main-wrapper .hmcabw-parent-container .hmcabw-info-container h3.hmcabw-name {
+    border: 0px solid #000;
+    margin: 0;
+    margin-top: 2px;
+    padding: 0;
+    font-size: 24px;
+    line-height: 30px;
+    color: #242424;
+}
+
+.hmcab-name-border-main {
+    height: 4px;
+    width: 80px;
+    margin: 10px 0px;
+    background-color: #999;
+    border-radius: 4px;
+}
+
+.hmcabw-main-wrapper .hmcabw-parent-container .hmcabw-info-container .hmcabw-title {
+    border: 0px solid #000;
+    margin: 0 0 8px 0;
+    padding: 0;
+    font-size: 18px;
+    font-weight: 400;
+    color: #242424;
+}
+
+.hmcabw-main-wrapper .hmcabw-parent-container .hmcabw-info-container p.hmcabw-bio-info {
+    border: 0px solid #000;
+    margin: 5px 0;
+    padding: 0;
+    display: block;
+    text-decoration: none;
+}
+
+@media(max-width:600px) {
+    .hmcabw-main-wrapper .hmcabw-parent-container {
+        display: block;
+    }
+    .hmcabw-main-wrapper .hmcabw-parent-container .hmcabw-image-container,
+    .hmcabw-main-wrapper.left-aligned .hmcabw-parent-container .hmcabw-image-container {
+        width: 100%;
+        text-align: center;
+    }
+    .hmcabw-main-wrapper .hmcabw-parent-container .hmcabw-image-container img {
+        width: 150px;
+    }
+    .hmcabw-main-wrapper .hmcabw-parent-container .hmcabw-info-container {
+        text-align: center;
+    }
+    .hmcab-name-border-main {
+        margin: 10px auto;
+    }
+}
