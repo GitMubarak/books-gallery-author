@@ -3,7 +3,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 /*
-Template Name: Books Author
+Template Name: Books Author - Single
 Template Post Type: book_author
 */
 
@@ -15,6 +15,16 @@ if( $wbg_author_slug != '' ) {
     $wbg_author = get_term_by('slug', $wbg_author_slug, 'book_author');
 
     $books_author_image_id = get_term_meta ( $wbg_author->term_id, 'books_author_image_id', true );
+
+    $primary_author = get_posts( array(
+        'post_type' => 'books',
+        'meta_key'   => 'wbg_author',
+        'meta_value' => $wbg_author->name,
+        'post_status' => 'publish',
+        'posts_per_page' => -1
+    ) );
+
+    $primary_author_count = count($primary_author);
     ?>
     <style type="text/css">
         .wbg-parent-wrapper {
@@ -44,8 +54,11 @@ if( $wbg_author_slug != '' ) {
 
     </div>
     <?php
-
-    echo do_shortcode('[wp_books_gallery author="' . $wbg_author->name . '" search=0 display-total=0]');
+    if ( $primary_author_count > 0 ) {
+        echo do_shortcode('[wp_books_gallery author="' . $wbg_author->name . '" search=0 display-total=0 no-book-message="Hide"]');
+    } else {
+        echo do_shortcode('[wp_books_gallery co-author="' . $wbg_author->name . '" search=0 display-total=0 no-book-message="Hide"]');
+    }
 }
 
 get_footer(); 

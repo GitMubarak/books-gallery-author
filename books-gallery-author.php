@@ -158,11 +158,22 @@ function wbga_load_author_view( $attr ) {
 add_filter('taxonomy_template', 'wbga_load_author_template');
 function wbga_load_author_template( $template ) {
     
-    if (is_tax('book_author')) {
+    if ( is_tax('book_author') ) {
         return WBGA_PATH . 'taxonomy-book-author.php';
     }
 
     return $template;
+}
+
+add_shortcode( 'books_gallery_author_list', 'wbga_load_author_list_view' );
+function wbga_load_author_list_view( $attr ) {
+    
+    $output = '';
+    ob_start();
+    include WBGA_PATH . 'author-list.php';
+    $output .= ob_get_clean();
+    
+    return $output;
 }
 
 // Step7: Display the Image on Frontend
