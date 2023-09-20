@@ -17,7 +17,8 @@ TBA
 == Changelog ==
 
 = 1.1 =
-* Initial release
+* Author List Panel Added With Shortcode
+* Author Email Added to Admin Author Panel
 
 = 1.0 =
 * Initial release
