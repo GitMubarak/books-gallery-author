@@ -11,7 +11,7 @@ $wbg_author = get_term_by('name', $wbg_author_name, 'book_author');
 if ( ! empty( $wbg_author ) ) {
     $books_author_image_id = get_term_meta ( $wbg_author->term_id, 'books_author_image_id', true );
     ?>
-    <div class="hmcabw-main-wrapper <?php esc_attr_e( $hmcabw_select_template ); ?> <?php esc_attr_e( $cab_temp ); ?>">
+    <div class="hmcabw-main-wrapper">
 
         <div class="hmcabw-parent-container">
 
