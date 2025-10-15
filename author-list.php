@@ -17,7 +17,7 @@ if ( ! empty( $book_authors ) ) {
             <div class="wbga-author-items">
 
                 <div class="hmcabw-image-container circle">
-                    <img src="<?php echo esc_url( $books_author_image_id ); ?>" />
+                    <img src="<?php echo esc_url( $books_author_image_id ); ?>" alt="<?php esc_attr_e( $author->name ); ?>" />
                 </div>
 
                 <div class="hmcabw-info-container">

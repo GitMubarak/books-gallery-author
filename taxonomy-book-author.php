@@ -12,6 +12,7 @@ get_header();
 $wbg_author_slug = isset( get_queried_object()->slug ) ? get_queried_object()->slug : '';
   
 if( $wbg_author_slug != '' ) {
+    
     $wbg_author = get_term_by('slug', $wbg_author_slug, 'book_author');
 
     $books_author_image_id = get_term_meta ( $wbg_author->term_id, 'books_author_image_id', true );
@@ -37,7 +38,7 @@ if( $wbg_author_slug != '' ) {
         <div class="hmcabw-parent-container">
 
             <div class="hmcabw-image-container circle">
-                <img src="<?php echo esc_url( $books_author_image_id ); ?>" style="width: 150px"/>
+                <img src="<?php echo esc_url( $books_author_image_id ); ?>" style="width: 150px" alt="<?php esc_attr_e( $wbg_author->name ); ?>"/>
             </div>
 
             <div class="hmcabw-info-container">

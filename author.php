@@ -16,18 +16,18 @@ if ( ! empty( $wbg_author ) ) {
         <div class="hmcabw-parent-container">
 
             <div class="hmcabw-image-container circle">
-                <img src="<?php echo esc_url( $books_author_image_id ); ?>" style="width: 150px"/>
+                <img src="<?php echo esc_url( $books_author_image_id ); ?>" style="width: 150px" alt="<?php esc_attr_e( $wbg_author->name ); ?>"/>
             </div>
 
             <div class="hmcabw-info-container">
 
-                <h3 class="hmcabw-name"><a href="<?php echo esc_url( home_url( '/book-author/' . $wbg_author->slug ) ); ?>"><?php echo $wbg_author->name; ?></a></h3>
+                <h3 class="hmcabw-name"><a href="<?php echo esc_url( home_url( '/book-author/' . $wbg_author->slug ) ); ?>"><?php esc_html_e( $wbg_author->name ); ?></a></h3>
 
                 <div class="hmcab-name-border-main"></div>
 
                 <p class="hmcabw-bio-info"><?php echo wp_trim_words( nl2br( $wbg_author->description ), 40, '...' ); ?></p>
 				
-				<a href="<?php echo esc_url( home_url( '/book-author/' . $wbg_author->slug ) ); ?>"><?php _e('Read More'); ?></a>
+				<a href="<?php echo esc_url( home_url( '/book-author/' . $wbg_author->slug ) ); ?>" class="more-about"><?php echo __('More About', 'books-gallery-author') . '&nbsp;' . esc_html( $wbg_author->name ); ?></a>
 
             </div>
         </div>
