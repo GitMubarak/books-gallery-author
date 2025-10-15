@@ -2,13 +2,13 @@
 /**
  * Plugin Name:	Books Gallery Author
  * Plugin URI:	https://github.com/GitMubarak/books-gallery-author/
- * Description:	Add custom fields to the Books Gallery author panel.
+ * Description:	Display author panel and author bio info within your Books Gallery.
  * Author:		HM Plugin
  * Author URI:	https://hmplugin.com/
  * Version:		1.1
- * Requires at least:   5.2
+ * Requires at least:   5.4
  * Requires PHP:        7.2
- * Tested up to:        6.3.1
+ * Tested up to:        6.8.3
  * License:             GPLv2 or later
  * License URI:         http://www.gnu.org/licenses/gpl-2.0.html
  */
@@ -147,7 +147,7 @@ add_action( 'wp_enqueue_scripts', 'wbga_load_front_scripts' );
 function wbga_load_front_scripts() {
     wp_enqueue_style(
         'wbga-front',
-        WBGA_ASSETS . 'author.css',
+        WBGA_ASSETS . 'wbga-front.css',
         array(),
         WBGA_VERSION,
         FALSE
